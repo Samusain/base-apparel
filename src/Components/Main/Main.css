@@ -1,0 +1,126 @@
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --Linear: (135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+    --Linear: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 6rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: auto;
+}
+
+.logo {
+    margin-bottom: 5rem;
+}
+
+.content h1 {
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.1;
+    width: 60%;
+}
+
+.plural {
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+}
+
+.content p {
+    color: var(--Desaturated-Red);
+    line-height: 1.7;
+    font-weight: 500;
+    margin-top: 2rem;
+    width: 60%;
+}
+
+/* button {
+    background-color: linear(135deg,from hsl(0, 36%, 70%),to hsl(0, 93%, 68%));
+    padding: 0.5rem 1.2rem;
+    border-radius: 15px;
+    } */
+    
+#form {
+    display: flex;
+    margin-top: 1.8rem;
+    width: 90%;
+}
+
+#form input {
+    font-family: "Josefin Sans", sans-serif;
+    font-family: 600;
+    color: var(--Desaturated-Red);
+    border: 1px solid var(--Desaturated-Red);
+    width: 20rem;
+    height: auto;
+    border-radius: 30px;
+    padding: 0.5rem ;
+}
+
+#error {
+    display: block;
+    color: var(--Soft-Red);
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: start;
+}
+
+.arrow {
+    margin-top: 5px;
+    border-radius: 30px;
+    background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    padding: 0.8rem 2rem;
+    border: 0px;
+    margin-left: -2.5rem;
+    height: auto;
+}
+
+/* .arrow:hover {
+    
+} */
+
+.female {
+    width: auto;
+    /* height: 60%; */
+    max-height: 97vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.attribution { 
+    font-size: 13px; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: var(--Soft-Red); 
+    text-decoration: none;
+}
+
+@media screen and (max-width: 37.5rem){
+    main {
+        flex-direction: column;
+    }
+
+    .content {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    
+    
+}
