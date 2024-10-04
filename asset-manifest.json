@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.505571ed.css",
+    "main.js": "/static/js/main.6fe14b4d.js",
+    "static/media/hero-desktop.jpg": "/static/media/hero-desktop.659bc9a7221d265fe28f.jpg",
+    "static/media/logo.svg": "/static/media/logo.bfe35add16fb8c010b0231ce711541c6.svg",
+    "index.html": "/index.html",
+    "static/media/icon-arrow.svg": "/static/media/icon-arrow.4b3d2d93cd838720beda936cd05c7382.svg",
+    "main.505571ed.css.map": "/static/css/main.505571ed.css.map",
+    "main.6fe14b4d.js.map": "/static/js/main.6fe14b4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.505571ed.css",
+    "static/js/main.6fe14b4d.js"
+  ]
+}
