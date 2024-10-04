@@ -3,7 +3,7 @@
     --Soft-Red: hsl(0, 93%, 68%);
     --Dark-Grayish-Red: hsl(0, 6%, 24%);
     --Linear: (135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
-    --Linear: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+    --Linear: (135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
 }
 
 .main {
@@ -12,24 +12,32 @@
     margin-left: 6rem;
 }
 
+.female {
+    width: auto;
+    height: 100vh;
+    max-height: 100%;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin: auto;
+    margin-top: 4rem;
 }
 
-.logo {
-    margin-bottom: 5rem;
-}
-
-.content h1 {
-    letter-spacing: 10px;
-    font-size: 50px;
+article{
+    width: 55%;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+h1 {
+    letter-spacing: 10px;
+    font-size: 60px;
     line-height: 1.1;
-    width: 60%;
 }
 
 .plural {
@@ -37,35 +45,56 @@
     color: var(--Desaturated-Red);
 }
 
-.content p {
+p {
     color: var(--Desaturated-Red);
     line-height: 1.7;
-    font-weight: 500;
     margin-top: 2rem;
-    width: 60%;
 }
 
-/* button {
-    background-color: linear(135deg,from hsl(0, 36%, 70%),to hsl(0, 93%, 68%));
-    padding: 0.5rem 1.2rem;
-    border-radius: 15px;
-    } */
-    
 #form {
-    display: flex;
     margin-top: 1.8rem;
     width: 90%;
 }
 
-#form input {
-    font-family: "Josefin Sans", sans-serif;
-    font-family: 600;
-    color: var(--Desaturated-Red);
+.email {
+    width: 50%;
     border: 1px solid var(--Desaturated-Red);
-    width: 20rem;
-    height: auto;
     border-radius: 30px;
+    display: flex;
+}
+
+.border {
+    border: 1.5px solid var(--Soft-Red);
+}
+
+input {
+    font: var(--Desaturated-Red) 400 14px "Josefin Sans", sans-serif;
+    width: 20rem;
+    border: 0;
+    border-radius: 20px;
+    height: auto;
     padding: 0.5rem ;
+    outline: none;
+    margin: 0 1rem;
+}
+
+.btn {
+    border: 0;
+    background-color: #fff;
+}
+
+.arrow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    padding: 0.8rem 2rem;
+    height: auto;
+    transition: 1s;
+    &:hover{
+        margin-right: -2.5rem;
+        padding: 0.8rem 2.3rem;
+        background-color: linear-gradient(135deg,#ffffff,#fff5f5);
+    }
 }
 
 #error {
@@ -77,50 +106,63 @@
     text-align: start;
 }
 
-.arrow {
-    margin-top: 5px;
-    border-radius: 30px;
-    background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-    padding: 0.8rem 2rem;
-    border: 0px;
-    margin-left: -2.5rem;
-    height: auto;
-}
-
-/* .arrow:hover {
-    
-} */
-
-.female {
-    width: auto;
-    /* height: 60%; */
-    max-height: 97vh;
-}
-
-footer {
-    margin-top: auto;
-}
-
-.attribution { 
-    font-size: 13px; 
-    text-align: center; 
-}
-    
-.attribution a { 
-    color: var(--Soft-Red); 
-    text-decoration: none;
-}
 
 @media screen and (max-width: 37.5rem){
-    main {
+    .main {
         flex-direction: column;
+        margin: 0;
+    }
+    
+    .content {
+        align-items: center;
+        justify-content: center;
     }
 
-    .content {
+    .female {
+        width: 100vw;
+        min-height: 10%;
+    }
+
+    article {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: auto;
     }
     
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
     
+    #form {
+        width: auto;
+        margin-top: 1.8rem;
+    }
+    
+    .email {
+        width: auto;
+        border: 1px solid var(--Desaturated-Red);
+        border-radius: 30px;
+        display: flex;
+    }
+
+    input {
+        width: 10rem;
+        padding: 0.3rem;
+    }
+
+    .arrow {
+        padding: 0.5rem 1.5rem;
+        transition: 1s;
+        &:hover{
+            padding: 0.5rem 1.8rem;
+        }
+    }
 }

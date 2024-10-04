@@ -1,10 +1,8 @@
 import React from 'react'
 import './Main.css'
 import Img1 from '../../images/hero-desktop.jpg'
-import Img2 from '../../images/logo.svg'
 import Img3 from '../../images/icon-arrow.svg'
 import { useState } from 'react'
-// import Toaster from '../../Components/Notifications/Toaster'
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
@@ -14,20 +12,18 @@ const Main = () => {
     const [error, setError] = useState('')
 
     const handleChanges = (e) => {
-        setEmail( prevState => ({
-          ...prevState, [e.target.name]: e.target.email
-        }));
+        setEmail(e.target.value);
         setError({});
     }
 
     const validate = (email) => {
+        const red = document.getElementsByClassName('email')
         const error = {}
-        if (!email) {
-            error.email = 'This field is required';
-          } else if (!emailRegex.test(email)) {
-            error.email = 'Invalid email address';
-          }
-
+        if (!email || !emailRegex.test(email)) {
+            error.email = 'Please provide a valid email';
+            red.classList.add('border');
+        } 
+          red.classList.remove('border');
           return error;
     }
 
@@ -38,8 +34,7 @@ const Main = () => {
         
         if(Object.keys(error).length === 0){
           console.log(email)
-        //   localStorage.setItem("userMail",  JSON.stringify(email));
-        //   setSuccess('Registration successful!')
+          window.location.reload();
         }
       }
 
@@ -47,9 +42,8 @@ const Main = () => {
     <div className='main'>
       <img src={Img1} alt="hero-desktop" className="female"/>
       <div className="content">
-        <img src={Img2} alt="logo" className="logo"/>
         <article>
-          <h1><span class="plural">WE'RE</span> COMING SOON</h1>
+          <h1><span className="plural">WE'RE</span> COMING SOON</h1>
           <p>Hello fellow shoppers! We're currently building our new fashion store. 
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
         </article>
@@ -63,9 +57,9 @@ const Main = () => {
                 value={email}
                 onChange={handleChanges}
                 />
-                <button type="submit"><img src={Img3} alt="icon-arrow" className="arrow"/></button> 
-                <span id="error">{error.email}</span>
+                <button type="submit" className='btn'><img src={Img3} alt="icon-arrow" className="arrow"/></button> 
             </div>
+                <span id="error">{error.email}</span>
         </form>
         {
 
