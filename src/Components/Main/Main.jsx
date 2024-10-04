@@ -3,6 +3,7 @@ import './Main.css'
 import Img1 from '../../images/hero-desktop.jpg'
 import Img3 from '../../images/icon-arrow.svg'
 import { useState } from 'react'
+import Toaster from '../Notifications/Toaster'
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
@@ -10,6 +11,8 @@ const Main = () => {
 
     const [email, setEmail] = useState('')
     const [error, setError] = useState('')
+
+    const [success, setSuccess] = useState('')
 
     const handleChanges = (e) => {
         setEmail(e.target.value);
@@ -21,9 +24,9 @@ const Main = () => {
         const error = {}
         if (!email || !emailRegex.test(email)) {
             error.email = 'Please provide a valid email';
-            red.classList.add('border');
+            // red.classList.add('border');
         } 
-          red.classList.remove('border');
+          // red.classList.remove('border');
           return error;
     }
 
@@ -33,8 +36,11 @@ const Main = () => {
         setError(error)
         
         if(Object.keys(error).length === 0){
-          console.log(email)
-          window.location.reload();
+          setSuccess('Stay tunned for announcements and launch deals');
+          setTimeout(() => {
+            window.location.reload();
+          }, 3000);
+          console.log(email);
         }
       }
 
@@ -61,8 +67,9 @@ const Main = () => {
             </div>
                 <span id="error">{error.email}</span>
         </form>
-        {
-
+        {success? <Toaster successMsg={success}/>
+          : 
+          <></>
         }
       </div>
     </div>
