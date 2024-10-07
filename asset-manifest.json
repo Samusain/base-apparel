@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/baseapparel/static/css/main.be6a1768.css",
-    "main.js": "/baseapparel/static/js/main.f48cacb0.js",
-    "static/media/hero-desktop.jpg": "/baseapparel/static/media/hero-desktop.659bc9a7221d265fe28f.jpg",
-    "static/media/logo.svg": "/baseapparel/static/media/logo.bfe35add16fb8c010b0231ce711541c6.svg",
-    "index.html": "/baseapparel/index.html",
-    "static/media/icon-arrow.svg": "/baseapparel/static/media/icon-arrow.4b3d2d93cd838720beda936cd05c7382.svg",
-    "main.be6a1768.css.map": "/baseapparel/static/css/main.be6a1768.css.map",
-    "main.f48cacb0.js.map": "/baseapparel/static/js/main.f48cacb0.js.map"
+    "main.css": "/base-apparel/static/css/main.be6a1768.css",
+    "main.js": "/base-apparel/static/js/main.fd7435ef.js",
+    "static/media/hero-desktop.jpg": "/base-apparel/static/media/hero-desktop.659bc9a7221d265fe28f.jpg",
+    "static/media/logo.svg": "/base-apparel/static/media/logo.bfe35add16fb8c010b0231ce711541c6.svg",
+    "index.html": "/base-apparel/index.html",
+    "static/media/icon-arrow.svg": "/base-apparel/static/media/icon-arrow.4b3d2d93cd838720beda936cd05c7382.svg",
+    "main.be6a1768.css.map": "/base-apparel/static/css/main.be6a1768.css.map",
+    "main.fd7435ef.js.map": "/base-apparel/static/js/main.fd7435ef.js.map"
   },
   "entrypoints": [
     "static/css/main.be6a1768.css",
-    "static/js/main.f48cacb0.js"
+    "static/js/main.fd7435ef.js"
   ]
 }
