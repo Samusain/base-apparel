@@ -20,11 +20,11 @@ const Main = () => {
     }
 
     const validate = (email) => {
-        const red = document.getElementsByClassName('email')
+        const inputField = document.querySelector('div.email');        
         const error = {}
         if (!email || !emailRegex.test(email)) {
             error.email = 'Please provide a valid email';
-            // red.classList.add('border');
+            inputField.classList.add('border');
         } 
           // red.classList.remove('border');
           return error;

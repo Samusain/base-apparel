@@ -57,14 +57,14 @@ p {
 }
 
 .email {
-    width: 50%;
+    width: 55%;
     border: 1px solid var(--Desaturated-Red);
     border-radius: 30px;
     display: flex;
 }
 
 .border {
-    border: 1.5px solid var(--Soft-Red);
+    border: 2px solid var(--Soft-Red);
 }
 
 input {
@@ -86,14 +86,15 @@ input {
 .arrow {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-    background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-    padding: 0.8rem 2rem;
+    background-color: #ee8c8c;
+    padding: 0.8rem 2.3rem;
+    margin-right: -2rem;
     height: auto;
     transition: 1s;
     &:hover{
+        cursor: pointer;
         margin-right: -2.5rem;
-        padding: 0.8rem 2.3rem;
-        background-color: linear-gradient(135deg,#ffffff,#fff5f5);
+        background-color: #f8bfbf;
     }
 }
 
@@ -103,6 +104,7 @@ input {
     font-size: 13px;
     font-weight: 400;
     margin-top: 10px;
+    margin-left: 1.5rem;
     text-align: start;
 }
 
